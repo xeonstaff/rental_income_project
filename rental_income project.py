@@ -15,11 +15,9 @@ class RentalProp:
     investment = 0
     roi=0
 
-    def __init__(self, address, city, spaces, tickets):
+    def __init__(self, address, city):
         self.address = address
         self.city = city  
-        self.spaces = spaces
-        self.tickets = tickets 
 
     def income_calc(self, rental_income,other_income):
         self.income = rental_income + other_income
@@ -51,9 +49,8 @@ class RentalProp:
         print(f"Your ROI is {self.roi}%. This return is {roi_adj}.")
 
 #generating sample instance, testing attributes 
-first_house = RentalProp("100 Birch Ln Ct Dr", "Odessa",[1,2,3,4,5,6,7,8,9,10],[1,2,3,4,5,6,7,8,9,10])
+first_house = RentalProp("100 Birch Ln Ct Dr", "Odessa")
 print(first_house.city)
-print(first_house.spaces)
 
 #testing the income_calc method
 print(first_house.income_calc(2000,1000))
